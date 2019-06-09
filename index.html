@@ -121,6 +121,63 @@
       infowindow.open(map, marker);
     });
   });
+  
+ 
+  var ganeshCoords = [{
+      lat: 13.0827,
+      lng: 80.2707
+    }, //Chennai
+    {
+      lat: 32.7767,
+      lng: -96.7970
+    }, //Dallas
+
+    {
+      lat: 12.9716,
+      lng: 77.5946
+    }, //Bangalore
+
+    {
+      lat: 51.5074,
+      lng: 0.1278
+    }, //London
+
+  ]
+
+  var vijayCoords = [{
+      lat: 13.0827,
+      lng: 80.2707
+    }, //Chennai
+    {
+      lat: 19.0760,
+      lng: 72.8777
+    }, // Bombay
+    {
+      lat: 43.6532,
+      lng: -79.3832
+    } //Toronto
+  ];
+
+
+  var vijayPath = new google.maps.Polyline({
+    path: vijayCoords,
+    geodesic: true,
+    strokeColor: '#AB0000',
+    strokeOpacity: 2.0,
+    strokeWeight: 1.
+  });
+
+ var ganeshPath = new google.maps.Polyline({
+    path: ganeshCoords,
+    geodesic: true,
+    strokeColor: '#AB00FF',
+    strokeOpacity: 2.0,
+    strokeWeight: 1.
+  });
+
+  vijayPath.setMap(map);
+  ganeshPath.setMap(map);
+
 }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs-Yusm6TvZ_2d65EL-7meUCwzWDZOzz4&libraries=places&callback=initMap"
