@@ -112,4 +112,3 @@ function initMap() {
   ganeshPath.setMap(map);
 
 }
-    </script>
